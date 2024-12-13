@@ -1,0 +1,18 @@
+include README.md
+include LICENSE
+include requirements.txt
+include .env.example
+include instructions.md
+
+recursive-include examples *.ipynb
+recursive-include tests *.py
+recursive-include synaptic *.py
+recursive-include memory *.py
+recursive-include graph *.py
+recursive-include llm *.py
+
+recursive-exclude * __pycache__
+recursive-exclude * *.py[cod]
+recursive-exclude * *.so
+recursive-exclude * .DS_Store
+recursive-exclude synapticenv *

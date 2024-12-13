@@ -1,0 +1,69 @@
+# Core ML dependencies
+torch==2.0.0
+transformers>=4.47.0
+huggingface-hub>=0.26.5
+tokenizers>=0.21.0
+accelerate>=0.20.0
+
+# Graph and embeddings
+networkx>=2.8.0
+torch-geometric>=2.3.0
+faiss-cpu>=1.7.4  # Use faiss-gpu for GPU support
+node2vec>=0.4.6
+
+# LLM and Embeddings APIs
+anthropic>=0.8.0  # For Claude API
+openai>=1.12.0   # For OpenAI embeddings API
+langchain>=0.1.0  # For LangChain core
+langchain-openai>=0.0.2  # For OpenAI embeddings
+langchain-community>=0.0.10  # For LangChain community components
+python-dotenv>=1.0.0
+
+# Multimodal support
+Pillow>=10.0.0  # For image processing
+PyMuPDF>=1.23.0  # For PDF processing with images
+clip @ git+https://github.com/openai/CLIP.git  # For image embeddings
+
+# NLP and text processing
+spacy>=3.6.0
+tiktoken>=0.3.0
+en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.6.0/en_core_web_sm-3.6.0.tar.gz
+
+# Storage
+nano-vectordb==0.0.4.3
+
+# Demo dependencies
+streamlit>=1.32.0
+PyPDF2>=3.0.0
+python-docx>=1.0.0
+
+# Utilities
+numpy>=1.24.0
+tqdm>=4.65.0
+pydantic>=2.0.0
+pydantic-core>=2.0.2
+typing-extensions>=4.6.1
+annotated-types>=0.4.0
+
+# Additional dependencies for spacy
+catalogue>=2.0.6
+preshed>=3.0.2
+cymem>=2.0.2
+murmurhash>=0.28.0
+thinc>=8.1.8
+wasabi>=0.9.1
+srsly>=2.4.3
+typer>=0.3.0,<0.8.0
+
+# Testing
+pytest>=7.3.0
+pytest-cov>=4.0.0
+pytest-asyncio>=0.23.0
+
+# Optional text processing
+datasets>=2.0.0
+rouge>=1.0.0
+fuzzywuzzy>=0.18.0
+python-Levenshtein>=0.21.0
+semantic_text_splitter>=0.3.0
+langdetect>=1.0.9

@@ -1,0 +1,33 @@
+(synapticenv) abhinavagarwal@Abhinavs-MacBook-Pro synapticrag_project % pytest tests/test_memory.py
+............                                                                                                                            [100%]
+============================================================== warnings summary ===============================================================
+tests/test_memory.py::test_memory_state_persistence
+  /Users/abhinavagarwal/synapticrag_project/synaptic/memory/memorizer.py:209: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+    state = torch.load(path)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+
+--------- coverage: platform darwin, python 3.11.10-final-0 ----------
+Name                                Stmts   Miss  Cover   Missing
+-----------------------------------------------------------------
+synaptic/__init__.py                   14      0   100%
+synaptic/adapter.py                    76     53    30%   27-66, 70-132, 143-171, 187, 196, 201, 205-216, 220-249
+synaptic/config.py                     64      7    89%   108-117
+synaptic/graph/__init__.py              5      0   100%
+synaptic/graph/build_graph.py         102     68    33%   39-53, 63-87, 105-133, 147-189, 193-226, 233-240, 244-252
+synaptic/graph/embeddings.py           97     74    24%   28-39, 49-59, 70-85, 98-117, 126-148, 154-185, 195-235, 241-246, 250
+synaptic/graph/pyG_utils.py           111     97    13%   20-57, 67-100, 110-121, 130-145, 155-203, 208-246
+synaptic/graph/retrieval.py           100     79    21%   27-37, 41-52, 56-59, 68-121, 131-190, 198-203, 214-244
+synaptic/llm/__init__.py                3      0   100%
+synaptic/llm/llm_interface.py          61     39    36%   30-54, 68-79, 102-110, 128-157, 170-208
+synaptic/llm/prompts.py                30      3    90%   182, 191, 196
+synaptic/memory/__init__.py             4      0   100%
+synaptic/memory/clue_generator.py     106     37    65%   41, 62, 109, 124-126, 140, 159-161, 171-205, 214, 228-229, 237-250, 263-267
+synaptic/memory/memorizer.py           88      3    97%   119, 142, 147
+synaptic/memory/memory_model.py        64     13    80%   44-45, 49-52, 56, 70, 144, 175-176, 180-181, 185
+synaptic/pipeline.py                   73     49    33%   27-36, 47-70, 81-87, 100-118, 122-129, 133-140, 144-155, 159-164, 178-193
+-----------------------------------------------------------------
+TOTAL                                 998    522    48%
+
+12 passed, 1 warning in 132.45s (0:02:12)
+(synapticenv) abhinavagarwal@Abhinavs-MacBook-Pro synapticrag_project % 

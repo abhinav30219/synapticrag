@@ -1,0 +1,23 @@
+# Core dependencies
+accelerate
+aioboto3
+aiohttp
+graspologic
+hnswlib
+nano-vectordb
+networkx
+openai
+tenacity
+tiktoken
+torch
+transformers
+xxhash
+
+# Optional dependencies (commented out to minimize installation)
+# neo4j
+# ollama
+# oracledb
+# pymilvus
+# pymongo
+# pyvis
+# lmdeploy[all]
